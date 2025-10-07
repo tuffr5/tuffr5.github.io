@@ -1,0 +1,294 @@
+/* ===========================
+   Bin Duan — main.css
+   Dark theme, responsive, minimal
+   =========================== */
+
+/* ---------- CSS Variables ---------- */
+:root {
+  --bg: #0b0c10;
+  --panel: #121317;
+  --ink: #e8eaf0;
+  --muted: #a6adbb;
+  --brand: #8bd3ff;
+  --accent: #d1ffea;
+
+  --pill-bg: #1b1e27;
+  --card-bg: #151823;
+  --line: #24283b;
+
+  --radius: 14px;
+  --radius-pill: 999px;
+
+  --container: 980px;
+  --space-1: 6px;
+  --space-2: 10px;
+  --space-3: 14px;
+  --space-4: 18px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  --fs-1: 13px;
+  --fs-2: 15px;
+  --fs-3: 16px;
+  --fs-4: 18px;
+  --fs-5: 22px;
+  --fs-6: 32px;
+}
+
+/* Optional light mode if you ever switch */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #fafafa;
+    --panel: #ffffff;
+    --ink: #1a1d25;
+    --muted: #596072;
+    --brand: #006dff;
+    --accent: #0e7d6b;
+
+    --pill-bg: #eef2f8;
+    --card-bg: #ffffff;
+    --line: #e5e9f2;
+  }
+}
+
+/* default is dark theme */
+body.light-mode {
+  --bg: #fafafa;
+  --panel: #ffffff;
+  --ink: #1a1d25;
+  --muted: #596072;
+  --brand: #006dff;
+  --accent: #0e7d6b;
+  --pill-bg: #eef2f8;
+  --card-bg: #ffffff;
+  --line: #e5e9f2;
+}
+
+/* optional styling for the toggle button */
+#theme-toggle {
+  background: transparent;
+  border: 1px solid var(--brand);
+  color: var(--brand);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-left: auto;
+  transition: all 0.2s ease;
+}
+#theme-toggle:hover {
+  background: var(--brand);
+  color: var(--bg);
+}
+
+/* ---------- Reset / Base ---------- */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  font-size: var(--fs-3);
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--space-5);
+}
+
+/* ---------- Header / Hero ---------- */
+.site-header {
+  background: linear-gradient(180deg, var(--bg) 0%, #10121a 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  max-width: 25vw;             /* avoid huge scaling on large monitors */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--brand);
+  flex: 0 0 auto;
+}
+
+.hero-copy h1 {
+  margin: 0 0 var(--space-1) 0;
+  font-size: var(--fs-6);
+  line-height: 1.15;
+}
+.tagline {
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 var(--space-2) 0;
+}
+.links {
+  color: var(--muted);
+  margin-top: var(--space-1);
+  word-break: break-word;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: var(--space-6) 0;
+  background: var(--bg);
+}
+.section.alt {
+  background: var(--panel);
+}
+.section h2 {
+  margin: 0 0 var(--space-3) 0;
+  font-size: var(--fs-5);
+}
+
+/* ---------- Research pills ---------- */
+.pill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+.pill {
+  background: var(--pill-bg);
+  color: #dbe2ff;
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-1);
+  white-space: nowrap;
+}
+
+/* ---------- News list ---------- */
+.news {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.news li {
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.news li:last-child {
+  border-bottom: none;
+}
+.news .date {
+  display: inline-block;
+  width: 72px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* ---------- Publications ---------- */
+.pubs {
+  margin: 0 0 var(--space-3) 1.25rem;  /* ordered list indent */
+  padding: 0;
+}
+.pubs li {
+  margin: 8px 0;
+}
+.pubs .authors { font-weight: 600; }
+.pubs .title { font-style: italic; }
+.pubs .venue { color: var(--muted); }
+
+/* optional hanging indent look for long items */
+.pubs li {
+  padding-left: 0.25rem;
+  text-indent: -0.25rem;
+}
+
+/* ---------- Cards (software / projects) ---------- */
+.cards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-3);
+}
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand);
+}
+.card h3 {
+  margin: 2px 0 6px 0;
+  font-size: var(--fs-4);
+}
+.card .small {
+  color: var(--muted);
+  margin: var(--space-2) 0 0 0;
+  font-size: var(--fs-2);
+}
+
+/* ---------- Tables (if you add any) ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-3) 0;
+  font-size: var(--fs-2);
+}
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+th { color: var(--muted); font-weight: 600; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: var(--fs-2);
+}
+.site-footer .container {
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
+}
+
+/* ---------- Utilities ---------- */
+.center { text-align: center; }
+.muted { color: var(--muted); }
+.small { font-size: var(--fs-2); }
+.tight p { margin: 0.35rem 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .container { padding: 20px; }
+}
+
+@media (max-width: 640px) {
+  .hero { flex-direction: column; align-items: flex-start; }
+  .avatar { width: 84px; height: 84px; }
+  .site-header .container { padding-bottom: var(--space-4); }
+  .news .date { width: 64px; }
+}
+
+/* ---------- Print (optional) ---------- */
+@media print {
+  :root { --bg: #fff; --panel: #fff; --ink: #000; --muted: #444; --line: #ddd; }
+  body { color: #000; background: #fff; }
+  a { color: #000; text-decoration: underline; }
+  .site-header, .site-footer { border: none; }
+  .card, .pill { border-color: #ccc; }
+}
+/* End of main.css */

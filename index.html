@@ -18,18 +18,18 @@
     <div class="hero-copy">
       <h1>Bin Duan</h1>
       <p class="tagline">Multimodal representation learning and scalable systems for scientific data</p>
-      <p>
-        Postdoctoral Research Fellow, University of Michigan Medical School<br />
-      </p>
+      <p>Postdoctoral Research Fellow, University of Michigan Medical School</p>
       <p class="links">
-        <a href="mailto:duanb@umich.edu">duanb.at.umich.edu</a> ·
-        <a href="https://scholar.google.com/citations?user=Qv1v8KMAAAAJ" target="_blank" rel="noopener">Google Scholar</a> ·
-        <a href="https://scholar.google.com/citations?user=04SJDVoAAAAJ&hl=en" target="_blank" rel="noopener">GitHub</a> ·
-        <a href="misc/cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+        <a href="mailto:duanb@umich.edu">duanb@umich.edu</a> ·
+        <a href="https://scholar.google.com/citations?user=04SJDVoAAAAJ" target="_blank">Google Scholar</a> ·
+        <a href="https://github.com/tuffr5" target="_blank">GitHub</a> ·
+        <a href="misc/cv.pdf" target="_blank">CV (PDF)</a>
       </p>
     </div>
+    <button id="theme-toggle" aria-label="Toggle theme">☀️ / 🌙</button>
   </div>
 </header>
+
 
 <main>
 
@@ -171,5 +171,22 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const savedTheme = localStorage.getItem('theme');
+
+  // default is light unless user explicitly saved dark
+  if (savedTheme === 'dark') {
+    document.body.classList.remove('light-mode');
+  } else {
+    document.body.classList.add('light-mode');
+  }
+
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    const isLight = document.body.classList.contains('light-mode');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+</script>
 </body>
 </html>
