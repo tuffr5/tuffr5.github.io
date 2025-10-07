@@ -90,7 +90,7 @@ a:hover { text-decoration: underline; }
 
 /* ---------- Header / Hero ---------- */
 .site-header {
-  background: linear-gradient(180deg, var(--bg) 0%, #10121a 100%);
+  background: linear-gradient(180deg, var(--bg) 0%, #e3e3e3 100%);
   border-bottom: 1px solid var(--line);
 }
 
@@ -148,7 +148,7 @@ a:hover { text-decoration: underline; }
 }
 .pill {
   background: var(--pill-bg);
-  color: #dbe2ff;
+  color: #a0a9c5;
   border: 1px solid var(--line);
   padding: 6px 10px;
   border-radius: var(--radius-pill);
