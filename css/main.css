@@ -35,22 +35,6 @@
   --fs-6: 32px;
 }
 
-/* Optional light mode if you ever switch */
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #fafafa;
-    --panel: #ffffff;
-    --ink: #1a1d25;
-    --muted: #596072;
-    --brand: #006dff;
-    --accent: #0e7d6b;
-
-    --pill-bg: #eef2f8;
-    --card-bg: #ffffff;
-    --line: #e5e9f2;
-  }
-}
-
 /* default is dark theme */
 body.light-mode {
   --bg: #fafafa;
@@ -117,9 +101,9 @@ a:hover { text-decoration: underline; }
 }
 
 .avatar {
-  width: 96px;
-  height: 96px;
-  max-width: 25vw;             /* avoid huge scaling on large monitors */
+  width: 196px;
+  height: 196px;
+  max-width: 50vw;             /* avoid huge scaling on large monitors */
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--brand);

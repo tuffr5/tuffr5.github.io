@@ -1,192 +1,217 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bin Duan</title>
-  <meta name="description" content="Bin Duan — representation learning and scalable systems for multimodal scientific data." />
+  <meta name="description"
+    content="Bin Duan — representation learning and scalable systems for multimodal scientific data." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css" />
   <link rel="icon" href="favicon.ico" />
 </head>
-<body>
 
-<header class="site-header">
-  <div class="container hero">
-    <img class="avatar" src="images/binduan.jpg" alt="Photo of Bin Duan" />
-    <div class="hero-copy">
-      <h1>Bin Duan</h1>
-      <p class="tagline">Multimodal representation learning and scalable systems for scientific data</p>
-      <p>Postdoctoral Research Fellow, University of Michigan Medical School</p>
-      <p class="links">
-        <a href="mailto:duanb@umich.edu">duanb@umich.edu</a> ·
-        <a href="https://scholar.google.com/citations?user=04SJDVoAAAAJ" target="_blank">Google Scholar</a> ·
-        <a href="https://github.com/tuffr5" target="_blank">GitHub</a> ·
-        <a href="misc/cv.pdf" target="_blank">CV (PDF)</a>
-      </p>
+<body class="light-mode">
+
+  <header class="site-header">
+    <div class="container hero">
+      <img class="avatar" src="images/binduan.jpg" alt="Photo of Bin Duan" />
+      <div class="hero-copy">
+        <h1>Bin Duan</h1>
+        <p class="tagline">Multimodal representation learning and scalable systems for scientific data</p>
+        <p>Postdoctoral Research Fellow, University of Michigan Medical School</p>
+        <p class="links">
+          <a href="mailto:duanb@umich.edu">duanb@umich.edu</a> ·
+          <a href="https://scholar.google.com/citations?user=04SJDVoAAAAJ" target="_blank">Google Scholar</a> ·
+          <a href="https://github.com/tuffr5" target="_blank">GitHub</a> ·
+          <a href="misc/cv.pdf" target="_blank">CV (PDF)</a>
+        </p>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle theme">☀️</button>
     </div>
-    <button id="theme-toggle" aria-label="Toggle theme">☀️ / 🌙</button>
-  </div>
-</header>
+  </header>
 
 
-<main>
+  <main>
 
-<section id="research" class="section">
-  <div class="container">
-    <h2>Research</h2>
-    <p>
-      I build the algorithmic and computational infrastructure that makes large multimodal data usable for discovery, developing representation learning frameworks and open systems that align, register, and synthesize structure across imaging and related modalities.
-      Central question: <em>How can learning algorithms and infrastructure be co-designed to turn complex data into interpretable and actionable insight for scientific discovery?</em>
-    </p>
-    <div class="pill-grid">
-      <span class="pill">Multimodal representation learning</span>
-      <span class="pill">Registration and structure-aware modeling</span>
-      <span class="pill">Neural compression and fidelity</span>
-      <span class="pill">Uncertainty and reliability</span>
-      <span class="pill">Open, scalable platforms</span>
+    <section id="research" class="section">
+      <div class="container">
+        <h2>Research</h2>
+        <p>
+          I build the algorithmic and computational infrastructure that makes large multimodal data usable for
+          discovery, developing representation learning frameworks and open systems that align, register, and synthesize
+          structure across imaging and related modalities.
+          Central question: <em>How can learning algorithms and infrastructure be co-designed to turn complex data into
+            interpretable and actionable insight for scientific discovery?</em>
+        </p>
+        <div class="pill-grid">
+          <span class="pill">Multimodal representation learning</span>
+          <span class="pill">Registration and structure-aware modeling</span>
+          <span class="pill">Neural compression and fidelity</span>
+          <span class="pill">Uncertainty and reliability</span>
+          <span class="pill">Open, scalable platforms</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section alt">
+      <div class="container">
+        <h2>News</h2>
+        <ul class="news">
+          <li><span class="date">2025</span> Papers at ISBI’25 and NeurIPS’25 on cross-modal modeling and 3D X-ray
+            reconstruction.</li>
+          <li><span class="date">2024</span> Preprint on artifact-minimized high-ratio image compression for analysis
+            fidelity.</li>
+          <li><span class="date">2023</span> ICCV paper on saner deep image registration. Code released.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="selected" class="section">
+      <div class="container">
+        <h2>Selected Publications</h2>
+
+        <ol class="pubs">
+          <li>
+            <span class="authors">B. Duan</span>, L. A. Walker, B. Xie, W. J. Lee, A. Lin, Y. Yan, D. Cai.
+            <span class="title">Artifact-Minimized High-Ratio Image Compression with Preserved Analysis Fidelity</span>.
+            <span class="venue">preprint, 2024</span>.
+            <a href="https://www.biorxiv.org/content/10.1101/2024.07.17.603794v1" target="_blank"
+              rel="noopener">bioRxiv</a>
+          </li>
+
+          <li>
+            <span class="authors">B. Duan</span>, M. Zhong, Y. Yan.
+            <span class="title">Towards Saner Deep Image Registration</span>.
+            <span class="venue">ICCV 2023</span>.
+            <a href="https://arxiv.org/abs/2307.09696" target="_blank" rel="noopener">arXiv</a> ·
+            <a href="https://github.com/tuffr5/Saner-deep-registration" target="_blank" rel="noopener">code</a>
+          </li>
+
+          <li>
+            <span class="authors">B. Duan</span>, Y. Shang, D. Cai, Y. Yan.
+            <span class="title">Online Multi-Spectral Neuron Tracing</span>.
+            <span class="venue">ISBI 2025</span>.
+            <a href="https://arxiv.org/abs/2403.06251" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://github.com/tuffr5/online-tracing" target="_blank" rel="noopener">code</a>
+          </li>
+
+          <li>
+            F. Wang, J. Tao, J. Wu, <span class="authors">B. Duan</span>, K. Wang, Z. Yang, Y. Yan.
+            <span class="title">X-Field: A Physically Grounded Representation for 3D X-ray Reconstruction</span>.
+            <span class="venue">NeurIPS 2025</span>.
+          </li>
+
+          <li>
+            <span class="authors">B. Duan</span>, W. Wang, H. Tang, H. Latapie, Y. Yan.
+            <span class="title">Cascade Attention Guided Residue Learning GAN for Cross-Modal Translation</span>.
+            <span class="venue">ICPR 2021</span>.
+          </li>
+
+          <li>
+            <span class="authors">B. Duan</span>, W. Wang, H. Tang, Z. Zong, G. Yang, Y. Yan.
+            <span class="title">Audio-Visual Event Localization via Recursive Fusion by Joint Co-Attention</span>.
+            <span class="venue">WACV 2021</span>.
+          </li>
+
+          <li>
+            B. Xie, H. Tang, <span class="authors">B. Duan</span>, D. Cai, Y. Yan.
+            <span class="title">MLP-GAN for Brain Vessel Image Segmentation</span>.
+            <span class="venue">ICASSP</span>.
+          </li>
+
+          <li>
+            B. Xie, H. Tang, <span class="authors">B. Duan</span>, D. Cai, Y. Yan, G. Agam.
+            <span class="title">MaskSAM: Auto-prompt SAM with Mask Classification for Volumetric Medical Image
+              Segmentation</span>.
+            <span class="venue">ICCV</span>.
+          </li>
+        </ol>
+
+        <p class="more">
+          Full list: see <a href="https://scholar.google.com/citations?user=Qv1v8KMAAAAJ" target="_blank"
+            rel="noopener">Google Scholar</a> and <a href="misc/cv.pdf" target="_blank" rel="noopener">CV</a>.
+        </p>
+      </div>
+    </section>
+
+    <section id="software" class="section alt">
+      <div class="container">
+        <h2>Open-source</h2>
+        <ul class="cards">
+          <li class="card">
+            <h3>Online-Neuron-Tracing</h3>
+            <p>Object-tracking-based online-tracing for Brainbow images.</p>
+            <p class="small"><a href="https://github.com/tuffr5/online-tracing" target="_blank"
+                rel="noopener">GitHub</a></p>
+          </li>
+          <li class="card">
+            <h3>Saner-Deep-Registration</h3>
+            <p>Regularization-based sanity enforcers for deep image registration.</p>
+            <p class="small"><a href="https://github.com/tuffr5/Saner-deep-registration" target="_blank"
+                rel="noopener">GitHub</a></p>
+          </li>
+          <li class="card">
+            <h3>BrainbowTracing</h3>
+            <p>Unsupervised neural tracing in densely labeled multispectral images.</p>
+            <p class="small"><a href="https://github.com/tuffr5/BrainbowTracing" target="_blank"
+                rel="noopener">GitHub</a></p>
+          </li>
+          <li class="card">
+            <h3>CAR-GAN</h3>
+            <p>Cross-modal translation with cascade attention guided residual learning.</p>
+            <p class="small"><a href="https://github.com/tuffr5/CAR-GAN" target="_blank" rel="noopener">GitHub</a></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="service" class="section alt">
+      <div class="container">
+        <h2>Service</h2>
+        <p>Reviewer: CVPR, ICCV, ECCV, ICML, ICLR, NeurIPS, ISBI, WACV. </p>
+        <p>Outreach: Neurons Can Fly research program at Michigan.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Updated Oct 2025</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section id="news" class="section alt">
-  <div class="container">
-    <h2>News</h2>
-    <ul class="news">
-      <li><span class="date">2025</span> Papers at ISBI’25 and NeurIPS’25 on cross-modal modeling and 3D X-ray reconstruction.</li>
-      <li><span class="date">2024</span> Preprint on artifact-minimized high-ratio image compression for analysis fidelity.</li>
-      <li><span class="date">2023</span> ICCV paper on saner deep image registration. Code released.</li>
-    </ul>
-  </div>
-</section>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    (function () {
+      const btn = document.getElementById('theme-toggle');
+      const saved = localStorage.getItem('theme');
 
-<section id="selected" class="section">
-  <div class="container">
-    <h2>Selected Publications</h2>
+      // Start in light unless user explicitly saved dark
+      if (saved === 'dark') {
+        document.body.classList.remove('light-mode');
+      } else {
+        document.body.classList.add('light-mode');
+      }
 
-    <ol class="pubs">
-      <li>
-        <span class="authors">B. Duan</span>, L. A. Walker, B. Xie, W. J. Lee, A. Lin, Y. Yan, D. Cai. 
-        <span class="title">Artifact-Minimized High-Ratio Image Compression with Preserved Analysis Fidelity</span>.
-        <span class="venue">preprint, 2024</span>.
-        <a href="https://www.biorxiv.org/content/10.1101/2024.07.17.603794v1" target="_blank" rel="noopener">bioRxiv</a>
-      </li>
+      const setIcon = () => {
+        btn.textContent = document.body.classList.contains('light-mode') ? '🌙' : '☀️';
+      };
+      setIcon();
 
-      <li>
-        <span class="authors">B. Duan</span>, M. Zhong, Y. Yan.
-        <span class="title">Towards Saner Deep Image Registration</span>.
-        <span class="venue">ICCV 2023</span>.
-        <a href="https://arxiv.org/abs/2307.09696" target="_blank" rel="noopener">arXiv</a> ·
-        <a href="https://github.com/tuffr5/Saner-deep-registration" target="_blank" rel="noopener">code</a>
-      </li>
-
-      <li>
-        <span class="authors">B. Duan</span>, Y. Shang, D. Cai, Y. Yan.
-        <span class="title">Online Multi-Spectral Neuron Tracing</span>.
-        <span class="venue">ISBI 2025</span>.
-        <a href="https://arxiv.org/abs/2403.06251" target="_blank" rel="noopener">arXiv</a>
-		<a href="https://github.com/tuffr5/online-tracing" target="_blank" rel="noopener">code</a>
-      </li>
-
-      <li>
-        F. Wang, J. Tao, J. Wu, <span class="authors">B. Duan</span>, K. Wang, Z. Yang, Y. Yan.
-        <span class="title">X-Field: A Physically Grounded Representation for 3D X-ray Reconstruction</span>.
-        <span class="venue">NeurIPS 2025</span>.
-      </li>
-
-      <li>
-        <span class="authors">B. Duan</span>, W. Wang, H. Tang, H. Latapie, Y. Yan.
-        <span class="title">Cascade Attention Guided Residue Learning GAN for Cross-Modal Translation</span>.
-        <span class="venue">ICPR 2021</span>.
-      </li>
-
-      <li>
-        <span class="authors">B. Duan</span>, W. Wang, H. Tang, Z. Zong, G. Yang, Y. Yan.
-        <span class="title">Audio-Visual Event Localization via Recursive Fusion by Joint Co-Attention</span>.
-        <span class="venue">WACV 2021</span>.
-      </li>
-
-      <li>
-        B. Xie, H. Tang, <span class="authors">B. Duan</span>, D. Cai, Y. Yan.
-        <span class="title">MLP-GAN for Brain Vessel Image Segmentation</span>.
-        <span class="venue">ICASSP</span>.
-      </li>
-
-      <li>
-        B. Xie, H. Tang, <span class="authors">B. Duan</span>, D. Cai, Y. Yan, G. Agam.
-        <span class="title">MaskSAM: Auto-prompt SAM with Mask Classification for Volumetric Medical Image Segmentation</span>.
-        <span class="venue">ICCV</span>.
-      </li>
-    </ol>
-
-    <p class="more">
-      Full list: see <a href="https://scholar.google.com/citations?user=Qv1v8KMAAAAJ" target="_blank" rel="noopener">Google Scholar</a> and <a href="misc/cv.pdf" target="_blank" rel="noopener">CV</a>.
-    </p>
-  </div>
-</section>
-
-<section id="software" class="section alt">
-  <div class="container">
-    <h2>Open-source</h2>
-    <ul class="cards">
-	<li class="card">
-        <h3>Online-Neuron-Tracing</h3>
-        <p>Object-tracking-based online-tracing for Brainbow images.</p>
-        <p class="small"><a href="https://github.com/tuffr5/online-tracing" target="_blank" rel="noopener">GitHub</a></p>
-      </li>
-      <li class="card">
-        <h3>Saner-Deep-Registration</h3>
-        <p>Regularization-based sanity enforcers for deep image registration.</p>
-        <p class="small"><a href="https://github.com/tuffr5/Saner-deep-registration" target="_blank" rel="noopener">GitHub</a></p>
-      </li>
-      <li class="card">
-        <h3>BrainbowTracing</h3>
-        <p>Unsupervised neural tracing in densely labeled multispectral images.</p>
-        <p class="small"><a href="https://github.com/tuffr5/BrainbowTracing" target="_blank" rel="noopener">GitHub</a></p>
-      </li>
-      <li class="card">
-        <h3>CAR-GAN</h3>
-        <p>Cross-modal translation with cascade attention guided residual learning.</p>
-        <p class="small"><a href="https://github.com/tuffr5/CAR-GAN" target="_blank" rel="noopener">GitHub</a></p>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<section id="service" class="section alt">
-  <div class="container">
-    <h2>Service</h2>
-    <p>Reviewer: CVPR, ICCV, ECCV, ICML, ICLR, NeurIPS, ISBI, WACV. </p>
-	<p>Outreach: Neurons Can Fly research program at Michigan.</p>
-  </div>
-</section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>&copy; <span id="year"></span> Updated Oct 2025</p>
-  </div>
-</footer>
-
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script>
-  const toggle = document.getElementById('theme-toggle');
-  const savedTheme = localStorage.getItem('theme');
-
-  // default is light unless user explicitly saved dark
-  if (savedTheme === 'dark') {
-    document.body.classList.remove('light-mode');
-  } else {
-    document.body.classList.add('light-mode');
-  }
-
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-    const isLight = document.body.classList.contains('light-mode');
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
-  });
-</script>
+      btn.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        localStorage.setItem(
+          'theme',
+          document.body.classList.contains('light-mode') ? 'light' : 'dark'
+        );
+        setIcon();
+      });
+    })();
+  </script>
 </body>
+
 </html>
